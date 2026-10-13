@@ -1,6 +1,10 @@
 //First step for security package
 // security key , token generation , username extraction
 
+//Link
+// https://docs.google.com/document/d/1vybEWwKkvT9vlM42TYITTGrgEOsFaW28ybb85BGC47Y/edit?usp=sharing documentation
+
+
 package com.deepanshu.clinicbooking.security;
 
 
@@ -59,7 +63,7 @@ public class JwtUtil {
 
     // Method to validate the username this username is coming from DB to cross check
 
-    public boolean validateToken(String userName, String token){
+    public boolean validateToken( String token,String userName){
         final String extractedUser = extractUsername(token);
         return (extractedUser.equals(userName) && !isTokenExpired(token));
 
